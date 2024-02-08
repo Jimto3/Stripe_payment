@@ -1,42 +1,22 @@
 import Image from "next/image";
+import cover1 from "@/../public/Beige_Modern_Mindfulness_Book_Cover/1.png";
+import cover2 from "@/../public/Under_The_Sea_Coloring_/1.png";
+import cover3 from "@/../public/What_we_can_sell_1/1.png";
 import Link from "next/link";
 
-export default function Home() {
+export default function BookPage() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
-            <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-                <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-                    <a
-                        className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-                        href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        By Jimmy & Fee
-                    </a>
-                </div>
-            </div>
-
-            <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-                <h1 className="text-3xl font-bold font-mono">
-                    Colouring Books
-                </h1>
-            </div>
-
-            <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-                <Link
-                    href="/books"
-                    className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-                >
-                    Books
-                    <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                        -&gt;
-                    </span>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                        Digital Colouring Books For Sale
-                    </p>
-                </Link>
-            </div>
-        </main>
+        <div className="flex justify-center items-center h-full w-full mt-16 flex-row gap-16">
+            <Link href="books/1">
+                <Image src={cover1} alt="front cover" height={300}></Image>
+            </Link>
+            <Link href="books/2">
+                <Image src={cover2} alt="front cover" height={300}></Image>
+            </Link>
+            <Link href="books/3">
+                <Image src={cover3} alt="front cover" height={300}></Image>
+            </Link>
+            <div className=""></div>
+        </div>
     );
 }
