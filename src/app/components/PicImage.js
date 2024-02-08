@@ -5,8 +5,8 @@ export default function PicImage({ src, changeMain }) {
         <Image
             src={src}
             alt="image"
-            height={300}
-            width={200}
+            height={200}
+            width={150}
             onClick={() => changeMain(src)}
         ></Image>
     );

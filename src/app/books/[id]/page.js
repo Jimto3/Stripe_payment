@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import PicImage from "@/app/components/PicImage";
+import { checkout } from "../../../../checkout";
 
 const images = {
     1: {
@@ -58,6 +59,21 @@ export default function BuyBooks({ params }) {
                 <PicImage src={src5} changeMain={changeMain} />
                 <PicImage src={src6} changeMain={changeMain} />
             </div>
+            <button
+                className="mt-4 bg-green-500 p-2 border-2 border-white font-bold font-mono hover:bg-green-600 hover:text-black transition-colors"
+                onClick={() =>
+                    checkout({
+                        lineItems: [
+                            {
+                                price: "price_1OhDQEDej9x0gzNhUObaHStw",
+                                quantity: 1,
+                            },
+                        ],
+                    })
+                }
+            >
+                Buy Now!
+            </button>
         </div>
     );
 
