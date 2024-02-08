@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function BookPage() {
     return (
-        <div className="flex justify-center items-center h-full w-full mt-16 flex-row gap-16">
+        <div className="flex justify-center items-center h-[100vh] w-[100vw] flex-row gap-16">
             <Link href="books/1">
                 <Image src={cover1} alt="front cover" height={300}></Image>
             </Link>
